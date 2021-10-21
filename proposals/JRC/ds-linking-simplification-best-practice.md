@@ -38,8 +38,9 @@ The scope of this document is to provide a well-defined series of opinionated in
 ## 3. Conformance <a name="conformance"></a>
 
 The conformance classes and requirements expressed here apply to the data set and service metadata records, as well as to the service (capabilities) documents.
-At this moment, these cannot be applied to the Download Services that rely on the OGC API - Feature specification, due to the lack of the mapping of INSPIRE metadata elements in the [OAPIF BP] document.
 In particular, the data set and service metadata records shall be INSPIRE-compliant (checked through the Reference Validator), should be available in the relevant national geoportal catalog (see https://inspire.ec.europa.eu/INSPIRE-in-your-Country), and consecutively harvested by the [INSPIRE Geoportal](https://inspire-geoportal.ec.europa.eu).
+
+Furthermore, at this moment the requirements expressed here for the Download Services cannot be applied to the ones that rely on the OGC API - Feature specification, due to the lack of the mapping for some conditional and mandatory INSPIRE metadata elements (ie. Coupled Resource, Unique Resource Identifier) in the [OAPIF BP] document.
 
 ## 4. Normative references <a name="normative-references"></a>
 
