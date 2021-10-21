@@ -78,11 +78,6 @@ For the purposes of this document, the following terms and definitions apply:
 | direct access download service | Download Service which provides access to the Spatial Objects in Spatial Data Sets based upon a query | \[[IRs for NS]\] |
 | encoding | Conversion of data into a series of codes. | [ISO 19118](https://www.iso.org/obp/ui/#iso:std:iso:19118:ed-2:v1:en:term:4.13) |
 | encoding rule | Identifiable collection of conversion rules that define the encoding for a particular data structure. | [ISO 19118](https://www.iso.org/obp/ui/#iso:std:iso:19118:ed-2:v1:en:term:4.14) |
-| feature | Abstraction of real world phenomena. **NOTE** The concept of a `feature` is synonymous to a `spatial object` in INSPIRE | [OGC API - Features - 1](http://docs.opengeospatial.org/is/17-069r3/17-069r3.html#_feature) |
-| feature collection | A set of features from a data set. | [OGC API - Features - 1](http://docs.opengeospatial.org/is/17-069r3/17-069r3.html#_feature_collection) |
-| feature type | **NOTE** The concept of a `feature type` is synonymous to a `spatial object type` in INSPIRE | [INSPIRE](https://inspire.ec.europa.eu/glossary/SpatialObject) |
-| pre-defined data set download service | Service that enables copies of spatial data sets, or parts of such sets, to be downloaded. | \[[IRs for NS]\] |
-
 
 **NOTE** ISO and the European Commission maintain comprehensive terminological databases at the following addresses:
 - [ISO Online browsing platform](https://www.iso.org/obp)
@@ -248,7 +243,7 @@ Regarding the definition of a Network Service metadata, two scenarios have been 
 
 ### 8.2.2 INSPIRE Network service - Scenario 2
 
- - With the implementation of the Scenario 2, the [INSPIRE NS - Download Service TG] maps all INSPIRE metadata elements to the OGC capabilities elements, where applicable, and relies on the ExtendedCapabilities section for the remaining elements.
+ - With the implementation of the Scenario 2, the [INSPIRE NS - Download Service TG] maps all INSPIRE metadata elements to the applicable elements in the service (ie. ATOM feed elements or OGC Capabilities), and in particular, for the OGC service, relies on the ExtendedCapabilities section for the remaining elements.
 - The data set metadata URL may point to a Discovery Service different from the national reference catalog. This may apply especially for federated Discovery Service catalogues.
 
 ### Requirement: \<wms:MetadataURL\> and \<wfs:MetadataURL\> elements
@@ -435,6 +430,7 @@ _Note: this example covers the WFS definition. For a WCS/SOS service, use the pr
 # Annex B: Mapping of INSPIRE elements in ExtendedCapabilities <a name="annex-b"></a>
 
 The [Discussion Paper on possible simplification of data-service linking in INSPIRE](https://github.com/INSPIRE-MIF/gp-data-service-linking-simplification/blob/main/resources/Discussion%20Paper%20on%20data-service%20linking%20v0.5.docx) proposes a new mapping of INSPIRE elements contained in the service metadata, as described for the Scenario2 in the INSPIRE Network Service TGs, in order to achieve an implementation simplification.
+
 During the MIWP 2.3.2 action, Antonio Rotundo (IT) further explored this, by reallocating elements outside the ExtendedCapabilities.
 The following tables express this simplification and reallocation:
 
